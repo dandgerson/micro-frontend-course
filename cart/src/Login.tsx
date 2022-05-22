@@ -19,11 +19,11 @@ export default function Login() {
 
       {isLoginShown && (
         <div
-          className='absolute p-5 border-4 border-blue-800'
+          className='absolute p-5 border-4 border-blue-800 bg-white rounded-xl text-black'
           style={{
             width: 300,
             top: '2rem',
-            // left: -250,
+            left: -250,
           }}
         >
           <input
@@ -36,7 +36,7 @@ export default function Login() {
           <input
             type='password'
             placeholder="Password"
-            value={username}
+            value={password}
             onChange={(event) => setPassword(event.target.value)}
             className='border text-sm border-gray-400 p-2 rounded-md w-full'
           />
