@@ -3,7 +3,7 @@ import { currency, getProducts } from "./products";
 import { addToCart, useLoggedIn } from 'cart/cart'
 
 export default function HomeContent() {
-  const loggedIn = useLoggedIn()
+  const isLoggedIn = useLoggedIn()
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function HomeContent() {
 
           <div className="flex">
             <div className="flex-grow font-bold">
-              <a href="">{product.name}</a>
+              <a href="#">{product.name}</a>
             </div>
 
             <div className="flex-end">
@@ -31,7 +31,7 @@ export default function HomeContent() {
               {product.description}
             </div>
 
-            {loggedIn && (
+            {isLoggedIn && (
               <div className="text-right mt-2">
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded"
